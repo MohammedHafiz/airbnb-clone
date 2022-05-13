@@ -34,7 +34,7 @@ jobs:
         mkdir .vercel
         cd .vercel
         touch project.json
-        echo '{"projectId":"prj_dhwtU2DamMwvicwL5KupYsvJFsrz","orgId":"tYh1JRsbx3ZIwVswy7KJFZXV"}'> project.json
+        echo '{"projectId":"prj_dhwtU2DamMwvicwL5KupYsvJFsrz","orgId":"tYh1JRsbx3ZIwVswy7KJFZXV"}' > project.json
     - name: Deploying the project
       run: npm run deploy    
     - name: Set up finish
