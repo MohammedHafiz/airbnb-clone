@@ -33,7 +33,7 @@ jobs:
       env:
         VERCEL_ORG_ID: tYh1JRsbx3ZIwVswy7KJFZXV
         VERCEL_PROJECT_ID: prj_dhwtU2DamMwvicwL5KupYsvJFsrz
-      run: npm deploy    
+      run: npm run deploy    
     - name: Set up finish
       run: echo "hurray!!!!"
 
