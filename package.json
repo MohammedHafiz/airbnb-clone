@@ -4,7 +4,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "deploy": "cd buid && vc --production"
+    "deploy": "cd buid && vc --prod"
   },
   "dependencies": {
     "@badrap/bar-of-progress": "^0.1.2",
