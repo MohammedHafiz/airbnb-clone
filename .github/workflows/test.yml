@@ -11,24 +11,25 @@ on:
 
 jobs:
   build-app:
-
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v2
-    - name: Install node_modules
-      run: npm install
-    - name: build the project
-      run: npm run build 
-    - name: Sets the vercel env
-      run: |
-        cd build
-        mkdir .vercel
-        cd .vercel
-        touch project.json
-        echo '{"projectId":"prj_dhwtU2DamMwvicwL5KupYsvJFsrz","orgId":"tYh1JRsbx3ZIwVswy7KJFZXV"}' > project.json
-    - name: Deploying the project
-      run: npm run deploy    
-    - name: Set up finish
-      run: echo "hurray!!!"
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: Install node_modules
+        run: npm install
+      - name: build the project
+        run: npm run build 
+      - name: Sets the vercel env
+        run: |
+          cd build
+          mkdir .vercel
+          cd .vercel
+          touch project.json
+          echo '{"projectId":"prj_dhwtU2DamMwvicwL5KupYsvJFsrz","orgId":"tYh1JRsbx3ZIwVswy7KJFZXV"}' > project.json
+      - name: Deploying the project
+        run: npm run deploy    
+      - name: Set up finish
+        run: echo "hurray!!!"
 
