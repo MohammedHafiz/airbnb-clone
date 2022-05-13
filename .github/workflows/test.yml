@@ -39,5 +39,5 @@ jobs:
     - name: Deploying the project
       run: npm run deploy    
     - name: Set up finish
-      run: echo "hurray!!!!"
+      run: echo "hurray!!!"
 
