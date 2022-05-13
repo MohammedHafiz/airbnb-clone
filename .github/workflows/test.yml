@@ -29,12 +29,11 @@ jobs:
     - run: npm ci
     - run: npm run build --if-present
     
-    - name: Build and push Docker Image
-      uses: docker/build-push-action@v3
-      with:
-          image: hafizba/airbnb-clone
-          registry: docker.io
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_PASSWORD }}
-    
+    - name: Deploying the project
+      env:
+        VERCEL_ORG_ID: tYh1JRsbx3ZIwVswy7KJFZXV
+        VERCEL_PROJECT_ID: prj_dhwtU2DamMwvicwL5KupYsvJFsrz
+      run: npm deploy    
+    - name: Set up finish
+      run: echo "hurray!!!!"
 
