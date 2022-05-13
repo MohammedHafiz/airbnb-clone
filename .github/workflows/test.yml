@@ -28,7 +28,7 @@ jobs:
         cache: 'npm'
     - run: npm ci
     - name: build the project
-    - run: npm run build 
+      run: npm run build 
     - name: Sets the vercel env
       run: |
         cd build
